@@ -6,7 +6,7 @@ const app = express();
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: 'http://localhost:5173',
+    origin: 'http://localhost:5174',
     methods: ['GET', 'POST']
   }
 });
@@ -24,5 +24,5 @@ io.on('connection', (socket) => {
 });
 
 server.listen(4000, () => {
-  console.log('Server listening on port 4000');
+  console.log('Server listening on port 5174');
 });
